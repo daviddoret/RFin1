@@ -1,4 +1,4 @@
-FV.sequential <- function(r,cashflow){
+FV.Sequential <- function(r,cashflow){
   # Computes the Future Value (FV) of a cashflow.
   # 
   # Args:

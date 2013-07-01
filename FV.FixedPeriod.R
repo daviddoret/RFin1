@@ -1,4 +1,4 @@
-FV.fixed.period <- function(r,amount,n){
+FV.FixedPeriod <- function(r,amount,n){
   # Computes the Future Value (FV) of a cashflow with a fixed number of periods.
   # 
   # Args:

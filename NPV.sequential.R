@@ -1,4 +1,4 @@
-NPV.sequential <- function(r,cashflow){
+NPV.Sequential <- function(r,cashflow){
   # Computes the Net Present Value (NPV) of a cashflow.
   # 
   # Args:
