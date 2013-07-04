@@ -1,8 +1,8 @@
-NPV.Sequential <- function(r,cashflow){
-  # Computes the Net Present Value (NPV) of a cashflow.
+NPV.Cashflow.FixedRate = function(r,cashflow){
+  # Computes the Net Present Value (NPV) of a cashflow with a fixed rate.
   # 
   # Args:
-  #   r:        the interest rate
+  #   r:        the fixed interest rate
   #   cashflow: a vector of sequential cashflows, c0, c1, c2, ..., cn
   # 
   # Returns: 
