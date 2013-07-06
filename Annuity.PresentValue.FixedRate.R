@@ -1,7 +1,7 @@
 Annuity.PresentValue.FixedRate <- function(fixed.interest.rate,
                                            fixed.amount,
                                            periods.number){
-  # Computes the Net Present Value (NPV) of an annuity.
+  # Computes the present value (PV) of an annuity.
   # 
   # Args:
   #   fixed.interest.rate: the interest rate, e.g.: 0.05 for 5%
@@ -9,7 +9,7 @@ Annuity.PresentValue.FixedRate <- function(fixed.interest.rate,
   #   periods.number: the number of periods
   # 
   # Returns: 
-  #   The Net Present Value of the annuity.
+  #   The present value (PV)
   #
   # Credits & references:
   #  - Financian Numerical Recipes in C++, January 2006, Bernt Arne 0degaard  
