@@ -15,7 +15,7 @@ periods.number <- c(seq(from = 1,
 data <- expand.grid(fixed.interest.rate,fixed.amount,periods.number)
 colnames(data) <- c("fixed.interest.rate","fixed.amount","periods.number")
 data$present.value <- Annuity.PresentValue(data = data)
-data$line <- paste0(data$fixed.amount," @ ", data$fixed.interest.rate * 100,"%")
+data$label <- paste0("Payment of a fixed amount of ", data$fixed.amount," with a ", data$fixed.interest.rate * 100,"% discount rate")
 attach(data)
 
 chart <- ggplot(data = data) + 
@@ -26,12 +26,12 @@ chart <- ggplot(data = data) +
   theme(legend.position = "bottom") +
   xlab("Time (i.e. number of periods)") +
   ylab("Present value") +
-  scale_colour_continuous(name = "Discount rate") +
+  scale_colour_discrete(name = "Annuity") +  
   ggtitle(paste0("THE EFFECT OF TIME ON ANNUITIES")) +
   geom_line(aes(x = periods.number,
                 y = present.value, 
-                group = line, 
-                colour = fixed.interest.rate))
+                group = label, 
+                colour = label))
 
 plot(chart) 
 
