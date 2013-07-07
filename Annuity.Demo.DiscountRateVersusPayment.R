@@ -15,7 +15,7 @@ data <- expand.grid(fixed.interest.rate,fixed.amount,periods.number)
 colnames(data) <- c("fixed.interest.rate","fixed.amount","periods.number")
 data[data$fixed.interest.rate == fixed.interest.rate[1],2] <- 100
 data[data$fixed.interest.rate == fixed.interest.rate[2],2] <- 200
-data$label <- paste0("Payment of", data$fixed.amount," @ ", data$fixed.interest.rate * 100,"%")
+data$label <- paste0("Payment of ", data$fixed.amount," with ", data$fixed.interest.rate * 100,"% discount rate")
 data$present.value <- Annuity.PresentValue(data = data)
 
 attach(data)
