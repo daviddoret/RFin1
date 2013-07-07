@@ -27,11 +27,7 @@ chart <- ggplot(data = data) +
   xlab("Time (i.e. number of periods)") +
   ylab("Present value") +
   scale_colour_continuous(name = "Discount rate") +
-  ggtitle(paste0("THE EFFECT OF TIME ON ANNUITIES",
-                 "\n\nThis graph shows the present value as a function of time for an annuity that",
-                 "\npays a fixed amount of 100 per period with a discount rate of 5%.",
-                 "\n\nIt shows the effect of time on the annuity: we see how the present value",
-                 "\nconverges towards: amount paid / discount rate.")) +
+  ggtitle(paste0("THE EFFECT OF TIME ON ANNUITIES")) +
   geom_line(aes(x = periods.number,
                 y = present.value, 
                 group = line, 
